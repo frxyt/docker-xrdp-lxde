@@ -1,0 +1,8 @@
+xrdp:
+  image: frxyt/xrdp-lxde:latest
+  build: .
+  ports:
+    - "22000:22"
+    - "33890:3389"
+  volumes:
+    - ./home:/home:rw
