@@ -17,7 +17,26 @@ This image packages LXDE with XRDP and VNC.
 
 ## Usage
 
-TODO
+### Configurable environment variables
+
+Please see usage & configuration details from base image: [`frxyt/xrdp`](https://github.com/frxyt/docker-xrdp)
+
+### Example
+
+To run this image, you can use this sample `docker-compose.yml` file:
+
+```yaml
+php:
+  image: frxyt/xrdp-lxde:latest
+  environment:
+    - FRX_XRDP_USER_NAME=john.doe
+    - FRX_XRDP_USER_PASSWORD=myNOTsecretPassword
+  ports:
+    - "22000:22"
+    - "3389:3389"
+  volumes:
+    - ./home:/home:rw
+```
 
 ## Build
 
